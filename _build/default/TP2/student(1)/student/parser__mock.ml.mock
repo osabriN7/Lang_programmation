@@ -1,0 +1,907 @@
+
+type token = 
+  | WhileToken
+  | UMinusToken
+  | TrueToken
+  | ThenToken
+  | StarToken
+  | SlashToken
+  | SequenceToken
+  | RightParenthesisToken
+  | RefToken
+  | RecToken
+  | PlusToken
+  | OrToken
+  | NumberToken of (
+# 6 "TP2/student(1)/student/parser.mly"
+       (int)
+# 19 "TP2/student(1)/student/parser__mock.ml.mock"
+)
+  | MinusToken
+  | LetToken
+  | LesserToken
+  | LesserEqualToken
+  | LeftParenthesisToken
+  | InToken
+  | IfToken
+  | IdentToken of (
+# 7 "TP2/student(1)/student/parser.mly"
+       (string)
+# 31 "TP2/student(1)/student/parser__mock.ml.mock"
+)
+  | GreaterToken
+  | GreaterEqualToken
+  | FunctionToken
+  | FalseToken
+  | EqualToken
+  | ElseToken
+  | EOF
+  | DoneToken
+  | DoToken
+  | DifferentToken
+  | DerefToken
+  | BodyToken
+  | AssignToken
+  | AndToken
+
+# 1 "TP2/student(1)/student/parser.mly"
+  
+open Ast
+
+# 52 "TP2/student(1)/student/parser__mock.ml.mock"
+
+let menhir_begin_marker =
+  0
+
+and (xv_main, xv_expr) =
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 85 "TP2/student(1)/student/parser.mly"
+               _2
+# 61 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 85 "TP2/student(1)/student/parser.mly"
+       a
+# 65 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 69 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_a_ : Lexing.position) (_endpos_a_ : Lexing.position) (_startofs_a_ : int) (_endofs_a_ : int) (_loc_a_ : Lexing.position * Lexing.position) ->
+    ((
+# 85 "TP2/student(1)/student/parser.mly"
+                      (a)
+# 74 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_main) : (
+# 52 "TP2/student(1)/student/parser.mly"
+       (Ast.ast)
+# 78 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 115 "TP2/student(1)/student/parser.mly"
+ _1
+# 83 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 115 "TP2/student(1)/student/parser.mly"
+                                                                     (FalseNode)
+# 88 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 92 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 114 "TP2/student(1)/student/parser.mly"
+ _1
+# 97 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 114 "TP2/student(1)/student/parser.mly"
+                                                                     (TrueNode)
+# 102 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 106 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 113 "TP2/student(1)/student/parser.mly"
+  i
+# 111 "TP2/student(1)/student/parser__mock.ml.mock"
+   : (
+# 6 "TP2/student(1)/student/parser.mly"
+       (int)
+# 115 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_i_ : Lexing.position) (_endpos_i_ : Lexing.position) (_startofs_i_ : int) (_endofs_i_ : int) (_loc_i_ : Lexing.position * Lexing.position) ->
+    ((
+# 113 "TP2/student(1)/student/parser.mly"
+                                                                     (IntegerNode i)
+# 120 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 124 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 112 "TP2/student(1)/student/parser.mly"
+  n
+# 129 "TP2/student(1)/student/parser__mock.ml.mock"
+   : (
+# 7 "TP2/student(1)/student/parser.mly"
+       (string)
+# 133 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_n_ : Lexing.position) (_endpos_n_ : Lexing.position) (_startofs_n_ : int) (_endofs_n_ : int) (_loc_n_ : Lexing.position * Lexing.position) ->
+    ((
+# 112 "TP2/student(1)/student/parser.mly"
+                                                                     (AccessNode n)
+# 138 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 142 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 111 "TP2/student(1)/student/parser.mly"
+                       e2
+# 147 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 151 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 111 "TP2/student(1)/student/parser.mly"
+           _2
+# 155 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 111 "TP2/student(1)/student/parser.mly"
+  e1
+# 159 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 163 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 111 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Divide,e1,e2))
+# 168 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 172 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 110 "TP2/student(1)/student/parser.mly"
+                      e2
+# 177 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 181 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 110 "TP2/student(1)/student/parser.mly"
+           _2
+# 185 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 110 "TP2/student(1)/student/parser.mly"
+  e1
+# 189 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 193 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 110 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Multiply,e1,e2))
+# 198 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 202 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 109 "TP2/student(1)/student/parser.mly"
+                       e2
+# 207 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 211 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 109 "TP2/student(1)/student/parser.mly"
+           _2
+# 215 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 109 "TP2/student(1)/student/parser.mly"
+  e1
+# 219 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 223 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 109 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Substract,e1,e2))
+# 228 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 232 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 108 "TP2/student(1)/student/parser.mly"
+                      e2
+# 237 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 241 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 108 "TP2/student(1)/student/parser.mly"
+           _2
+# 245 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 108 "TP2/student(1)/student/parser.mly"
+  e1
+# 249 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 253 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 108 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Add,e1,e2))
+# 258 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 262 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 107 "TP2/student(1)/student/parser.mly"
+                    e2
+# 267 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 271 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 107 "TP2/student(1)/student/parser.mly"
+           _2
+# 275 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 107 "TP2/student(1)/student/parser.mly"
+  e1
+# 279 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 283 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 107 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Or,e1,e2))
+# 288 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 292 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 106 "TP2/student(1)/student/parser.mly"
+                     e2
+# 297 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 301 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 106 "TP2/student(1)/student/parser.mly"
+           _2
+# 305 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 106 "TP2/student(1)/student/parser.mly"
+  e1
+# 309 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 313 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 106 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (And,e1,e2))
+# 318 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 322 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 105 "TP2/student(1)/student/parser.mly"
+                              e2
+# 327 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 331 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 105 "TP2/student(1)/student/parser.mly"
+           _2
+# 335 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 105 "TP2/student(1)/student/parser.mly"
+  e1
+# 339 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 343 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 105 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (GreaterEqual,e1,e2))
+# 348 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 352 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 104 "TP2/student(1)/student/parser.mly"
+                             e2
+# 357 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 361 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 104 "TP2/student(1)/student/parser.mly"
+           _2
+# 365 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 104 "TP2/student(1)/student/parser.mly"
+  e1
+# 369 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 373 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 104 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (LesserEqual,e1,e2))
+# 378 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 382 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 103 "TP2/student(1)/student/parser.mly"
+                         e2
+# 387 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 391 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 103 "TP2/student(1)/student/parser.mly"
+           _2
+# 395 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 103 "TP2/student(1)/student/parser.mly"
+  e1
+# 399 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 403 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 103 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Greater,e1,e2))
+# 408 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 412 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 102 "TP2/student(1)/student/parser.mly"
+                        e2
+# 417 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 421 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 102 "TP2/student(1)/student/parser.mly"
+           _2
+# 425 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 102 "TP2/student(1)/student/parser.mly"
+  e1
+# 429 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 433 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 102 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Lesser,e1,e2))
+# 438 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 442 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 101 "TP2/student(1)/student/parser.mly"
+                           e2
+# 447 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 451 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 101 "TP2/student(1)/student/parser.mly"
+           _2
+# 455 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 101 "TP2/student(1)/student/parser.mly"
+  e1
+# 459 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 463 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 101 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Different,e1,e2))
+# 468 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 472 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 100 "TP2/student(1)/student/parser.mly"
+                       e2
+# 477 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 481 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 100 "TP2/student(1)/student/parser.mly"
+           _2
+# 485 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 100 "TP2/student(1)/student/parser.mly"
+  e1
+# 489 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 493 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) ->
+    ((
+# 100 "TP2/student(1)/student/parser.mly"
+                                                                     (BinaryNode (Equal,e1,e2))
+# 498 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 502 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 99 "TP2/student(1)/student/parser.mly"
+                       e
+# 507 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 511 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) (
+# 99 "TP2/student(1)/student/parser.mly"
+          _2
+# 515 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 99 "TP2/student(1)/student/parser.mly"
+  i
+# 519 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 523 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_i_ : Lexing.position) (_endpos_i_ : Lexing.position) (_startofs_i_ : int) (_endofs_i_ : int) (_loc_i_ : Lexing.position * Lexing.position) ->
+    ((
+# 99 "TP2/student(1)/student/parser.mly"
+                                                                     (WriteNode(i,e))
+# 528 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 532 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 98 "TP2/student(1)/student/parser.mly"
+             e
+# 537 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 541 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) (
+# 98 "TP2/student(1)/student/parser.mly"
+ _1
+# 545 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 98 "TP2/student(1)/student/parser.mly"
+                                                                     (ReadNode e)
+# 550 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 554 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 97 "TP2/student(1)/student/parser.mly"
+           e
+# 559 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 563 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) (
+# 97 "TP2/student(1)/student/parser.mly"
+ _1
+# 567 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 97 "TP2/student(1)/student/parser.mly"
+                                                                     (RefNode e)
+# 572 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 576 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 96 "TP2/student(1)/student/parser.mly"
+              e
+# 581 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 585 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) (
+# 96 "TP2/student(1)/student/parser.mly"
+ _1
+# 589 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 96 "TP2/student(1)/student/parser.mly"
+                                                                     (UnaryNode (Negation,e))
+# 594 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 598 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 95 "TP2/student(1)/student/parser.mly"
+                               _3
+# 603 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) ((
+# 95 "TP2/student(1)/student/parser.mly"
+                       e
+# 607 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 611 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) (
+# 95 "TP2/student(1)/student/parser.mly"
+ _1
+# 615 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 95 "TP2/student(1)/student/parser.mly"
+                                                                     (e)
+# 620 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 624 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 94 "TP2/student(1)/student/parser.mly"
+                                                       p
+# 629 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 633 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_p_ : Lexing.position) (_endpos_p_ : Lexing.position) (_startofs_p_ : int) (_endofs_p_ : int) (_loc_p_ : Lexing.position * Lexing.position) (
+# 94 "TP2/student(1)/student/parser.mly"
+                               _3
+# 637 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) ((
+# 94 "TP2/student(1)/student/parser.mly"
+                       f
+# 641 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 645 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_f_ : Lexing.position) (_endpos_f_ : Lexing.position) (_startofs_f_ : int) (_endofs_f_ : int) (_loc_f_ : Lexing.position * Lexing.position) (
+# 94 "TP2/student(1)/student/parser.mly"
+ _1
+# 649 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 94 "TP2/student(1)/student/parser.mly"
+                                                                     (CallNode (f,p))
+# 654 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 658 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 93 "TP2/student(1)/student/parser.mly"
+                         p
+# 663 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 667 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_p_ : Lexing.position) (_endpos_p_ : Lexing.position) (_startofs_p_ : int) (_endofs_p_ : int) (_loc_p_ : Lexing.position * Lexing.position) (
+# 93 "TP2/student(1)/student/parser.mly"
+          _2
+# 671 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__2_ : Lexing.position) (_endpos__2_ : Lexing.position) (_startofs__2_ : int) (_endofs__2_ : int) (_loc__2_ : Lexing.position * Lexing.position) ((
+# 93 "TP2/student(1)/student/parser.mly"
+  e
+# 675 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 679 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) ->
+    ((
+# 93 "TP2/student(1)/student/parser.mly"
+                                                                     (SequenceNode(e,p))
+# 684 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 688 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) (
+# 92 "TP2/student(1)/student/parser.mly"
+                                     _5
+# 693 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) ((
+# 92 "TP2/student(1)/student/parser.mly"
+                             b
+# 697 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 701 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_b_ : Lexing.position) (_endpos_b_ : Lexing.position) (_startofs_b_ : int) (_endofs_b_ : int) (_loc_b_ : Lexing.position * Lexing.position) (
+# 92 "TP2/student(1)/student/parser.mly"
+                    _3
+# 705 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) ((
+# 92 "TP2/student(1)/student/parser.mly"
+             c
+# 709 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 713 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_c_ : Lexing.position) (_endpos_c_ : Lexing.position) (_startofs_c_ : int) (_endofs_c_ : int) (_loc_c_ : Lexing.position * Lexing.position) (
+# 92 "TP2/student(1)/student/parser.mly"
+ _1
+# 717 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 92 "TP2/student(1)/student/parser.mly"
+                                                          (WhileNode(c,b))
+# 722 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 726 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 91 "TP2/student(1)/student/parser.mly"
+                                               e
+# 731 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 735 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) (
+# 91 "TP2/student(1)/student/parser.mly"
+                                    _5
+# 739 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) ((
+# 91 "TP2/student(1)/student/parser.mly"
+                            t
+# 743 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 747 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_t_ : Lexing.position) (_endpos_t_ : Lexing.position) (_startofs_t_ : int) (_endofs_t_ : int) (_loc_t_ : Lexing.position * Lexing.position) (
+# 91 "TP2/student(1)/student/parser.mly"
+                 _3
+# 751 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) ((
+# 91 "TP2/student(1)/student/parser.mly"
+          c
+# 755 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 759 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_c_ : Lexing.position) (_endpos_c_ : Lexing.position) (_startofs_c_ : int) (_endofs_c_ : int) (_loc_c_ : Lexing.position * Lexing.position) (
+# 91 "TP2/student(1)/student/parser.mly"
+ _1
+# 763 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 91 "TP2/student(1)/student/parser.mly"
+                                                                     (IfthenelseNode (c,t,e))
+# 768 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 772 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 90 "TP2/student(1)/student/parser.mly"
+                                                       e2
+# 777 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 781 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 90 "TP2/student(1)/student/parser.mly"
+                                              _5
+# 785 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) ((
+# 90 "TP2/student(1)/student/parser.mly"
+                                     e1
+# 789 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 793 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) (
+# 90 "TP2/student(1)/student/parser.mly"
+                         _3
+# 797 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 90 "TP2/student(1)/student/parser.mly"
+           n
+# 801 "TP2/student(1)/student/parser__mock.ml.mock"
+   : (
+# 7 "TP2/student(1)/student/parser.mly"
+       (string)
+# 805 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_n_ : Lexing.position) (_endpos_n_ : Lexing.position) (_startofs_n_ : int) (_endofs_n_ : int) (_loc_n_ : Lexing.position * Lexing.position) (
+# 90 "TP2/student(1)/student/parser.mly"
+ _1
+# 809 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 90 "TP2/student(1)/student/parser.mly"
+                                                                     (LetrecNode (n,e1,e2))
+# 814 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 818 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 89 "TP2/student(1)/student/parser.mly"
+                                                       e2
+# 823 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 827 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e2_ : Lexing.position) (_endpos_e2_ : Lexing.position) (_startofs_e2_ : int) (_endofs_e2_ : int) (_loc_e2_ : Lexing.position * Lexing.position) (
+# 89 "TP2/student(1)/student/parser.mly"
+                                              _5
+# 831 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__5_ : Lexing.position) (_endpos__5_ : Lexing.position) (_startofs__5_ : int) (_endofs__5_ : int) (_loc__5_ : Lexing.position * Lexing.position) ((
+# 89 "TP2/student(1)/student/parser.mly"
+                                     e1
+# 835 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 839 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e1_ : Lexing.position) (_endpos_e1_ : Lexing.position) (_startofs_e1_ : int) (_endofs_e1_ : int) (_loc_e1_ : Lexing.position * Lexing.position) (
+# 89 "TP2/student(1)/student/parser.mly"
+                         _3
+# 843 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 89 "TP2/student(1)/student/parser.mly"
+           n
+# 847 "TP2/student(1)/student/parser__mock.ml.mock"
+   : (
+# 7 "TP2/student(1)/student/parser.mly"
+       (string)
+# 851 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_n_ : Lexing.position) (_endpos_n_ : Lexing.position) (_startofs_n_ : int) (_endofs_n_ : int) (_loc_n_ : Lexing.position * Lexing.position) (
+# 89 "TP2/student(1)/student/parser.mly"
+ _1
+# 855 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 89 "TP2/student(1)/student/parser.mly"
+                                                                     (LetNode (n,e1,e2))
+# 860 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 864 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  let _ = fun (_eRR : exn) (_startpos : Lexing.position) (_endpos : Lexing.position) (_endpos__0_ : Lexing.position) (_symbolstartpos : Lexing.position) (_startofs : int) (_endofs : int) (_endofs__0_ : int) (_symbolstartofs : int) (_sloc : Lexing.position * Lexing.position) (_loc : Lexing.position * Lexing.position) ((
+# 88 "TP2/student(1)/student/parser.mly"
+                                         e
+# 869 "TP2/student(1)/student/parser__mock.ml.mock"
+   : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 873 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_e_ : Lexing.position) (_endpos_e_ : Lexing.position) (_startofs_e_ : int) (_endofs_e_ : int) (_loc_e_ : Lexing.position * Lexing.position) (
+# 88 "TP2/student(1)/student/parser.mly"
+                              _3
+# 877 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__3_ : Lexing.position) (_endpos__3_ : Lexing.position) (_startofs__3_ : int) (_endofs__3_ : int) (_loc__3_ : Lexing.position * Lexing.position) (
+# 88 "TP2/student(1)/student/parser.mly"
+                n
+# 881 "TP2/student(1)/student/parser__mock.ml.mock"
+   : (
+# 7 "TP2/student(1)/student/parser.mly"
+       (string)
+# 885 "TP2/student(1)/student/parser__mock.ml.mock"
+  )) (_startpos_n_ : Lexing.position) (_endpos_n_ : Lexing.position) (_startofs_n_ : int) (_endofs_n_ : int) (_loc_n_ : Lexing.position * Lexing.position) (
+# 88 "TP2/student(1)/student/parser.mly"
+ _1
+# 889 "TP2/student(1)/student/parser__mock.ml.mock"
+   : unit) (_startpos__1_ : Lexing.position) (_endpos__1_ : Lexing.position) (_startofs__1_ : int) (_endofs__1_ : int) (_loc__1_ : Lexing.position * Lexing.position) ->
+    ((
+# 88 "TP2/student(1)/student/parser.mly"
+                                                                     (FunctionNode (n,e))
+# 894 "TP2/student(1)/student/parser__mock.ml.mock"
+     : 'tv_expr) : (
+# 49 "TP2/student(1)/student/parser.mly"
+      (Ast.ast)
+# 898 "TP2/student(1)/student/parser__mock.ml.mock"
+    )) in
+  (raise Not_found : 'tv_main * 'tv_expr)
+
+and menhir_end_marker =
+  0
+
+# 269 "<standard.mly>"
+  
+
+# 908 "TP2/student(1)/student/parser__mock.ml.mock"

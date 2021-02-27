@@ -1,0 +1,178 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Workspace root: /home/n7student/2A/TDL/student(1)
+$ /usr/bin/nproc > /tmp/dunecf7ccd.output 2> /dev/null
+# Auto-detected concurrency: 8
+# disable binary cache
+$ /home/n7student/_opam/bin/ocamlfind printconf path > /tmp/dune8e68a6.output
+$ /home/n7student/_opam/bin/ocamlc.opt -config > /tmp/dunec66aee.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = None
+#  ; ocaml_bin = External "/home/n7student/_opam/bin"
+#  ; ocaml = Ok External "/home/n7student/_opam/bin/ocaml"
+#  ; ocamlc = External "/home/n7student/_opam/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/n7student/_opam/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/n7student/_opam/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/n7student/_opam/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "CAML_LD_LIBRARY_PATH" :
+#            "/home/n7student/2A/TDL/student(1)/_build/install/default/lib/stublibs"
+#        ; "INSIDE_DUNE" : "/home/n7student/2A/TDL/student(1)/_build/default"
+#        ; "MANPATH" :
+#            "/home/n7student/2A/TDL/student(1)/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/n7student/2A/TDL/student(1)/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/n7student/2A/TDL/student(1)/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/n7student/2A/TDL/student(1)/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/home/n7student/_opam/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.07.1"
+#      ; standard_library_default = "/home/n7student/_opam/lib/ocaml"
+#      ; standard_library = "/home/n7student/_opam/lib/ocaml"
+#      ; standard_runtime = "/home/n7student/_opam/bin/ocamlrun"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fcommon"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fcommon" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fcommon"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fcommon"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; cc_profile = [ "-pg" ]
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-unknown-linux-gnu"
+#      ; target = "x86_64-unknown-linux-gnu"
+#      ; profiling = true
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = false
+#      ; exec_magic_number = "Caml1999X023"
+#      ; cmi_magic_number = "Caml1999I024"
+#      ; cmo_magic_number = "Caml1999O023"
+#      ; cma_magic_number = "Caml1999A023"
+#      ; cmx_magic_number = "Caml1999Y023"
+#      ; cmxa_magic_number = "Caml1999Z023"
+#      ; ast_impl_magic_number = "Caml1999M023"
+#      ; ast_intf_magic_number = "Caml1999N023"
+#      ; cmxs_magic_number = "Caml1999D023"
+#      ; cmt_magic_number = "Caml1999T024"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I 'TP2/student(1)/student/.miniML.objs/byte' -no-alias-deps -opaque -o 'TP2/student(1)/student/.miniML.objs/byte/miniML.cmo' -c -impl 'TP2/student(1)/student/miniML.ml-gen')
+$ (cd _build/default && /home/n7student/_opam/bin/ocamllex -q -o 'TP2/student(1)/student/lexer.ml' 'TP2/student(1)/student/lexer.mll')
+$ (cd _build/default && /home/n7student/_opam/bin/menhir 'TP2/student(1)/student/parser.mly' --base 'TP2/student(1)/student/parser' --infer-write-query 'TP2/student(1)/student/parser__mock.ml.mock')
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl 'TP2/student(1)/student/.miniML.inline-tests/inline_test_runner_miniML.ml-gen') > '_build/default/TP2/student(1)/student/.miniML.inline-tests/.miniML.inline-tests.eobjs/inline_test_runner_miniML.ml-gen.d'
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o student/Semantics.pp.ml --impl student/Semantics.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o 'TP2/student(1)/student/Main.pp.ml' --impl 'TP2/student(1)/student/Main.ml' -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o 'TP2/student(1)/student/lexer.pp.ml' --impl 'TP2/student(1)/student/lexer.ml' -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o 'TP2/student(1)/student/Ast.pp.ml' --impl 'TP2/student(1)/student/Ast.ml' -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o 'TP2/student(1)/student/Semantics.pp.ml' --impl 'TP2/student(1)/student/Semantics.ml' -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o 'TP2/student(1)/student/Types.pp.ml' --impl 'TP2/student(1)/student/Types.ml' -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl student/Semantics.pp.ml) > _build/default/student/.miniML.objs/Semantics.pp.ml.d
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl 'TP2/student(1)/student/Main.pp.ml') > '_build/default/TP2/student(1)/student/.miniML.objs/Main.pp.ml.d'
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o 'TP2/student(1)/student/parser__mock.ml.pp.mock' --impl 'TP2/student(1)/student/parser__mock.ml.mock' -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl 'TP2/student(1)/student/Types.pp.ml') > '_build/default/TP2/student(1)/student/.miniML.objs/Types.pp.ml.d'
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl 'TP2/student(1)/student/Semantics.pp.ml') > '_build/default/TP2/student(1)/student/.miniML.objs/Semantics.pp.ml.d'
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl 'TP2/student(1)/student/lexer.pp.ml') > '_build/default/TP2/student(1)/student/.miniML.objs/lexer.pp.ml.d'
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl 'TP2/student(1)/student/Ast.pp.ml') > '_build/default/TP2/student(1)/student/.miniML.objs/Ast.pp.ml.d'
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl 'TP2/student(1)/student/parser__mock.ml.pp.mock') > '_build/default/TP2/student(1)/student/.miniML.objs/parser__mock.ml.pp.mock.d'
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I student/.miniML.objs/byte -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -no-alias-deps -opaque -open MiniML -o student/.miniML.objs/byte/miniML__Semantics.cmo -c -impl student/Semantics.pp.ml)
+> File "student/Semantics.ml", line 99, characters 32-47:
+> Error: Unbound value ruleCallByValue
+[2]
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I 'TP2/student(1)/student/.miniML.objs/byte' -I 'TP2/student(1)/student/.miniML.objs/native' -intf-suffix .ml-gen -no-alias-deps -opaque -o 'TP2/student(1)/student/.miniML.objs/native/miniML.cmx' -c -impl 'TP2/student(1)/student/miniML.ml-gen')
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I 'TP2/student(1)/student/.miniML.objs/byte' -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -no-alias-deps -opaque -open MiniML -o 'TP2/student(1)/student/.miniML.objs/byte/miniML__Ast.cmo' -c -impl 'TP2/student(1)/student/Ast.pp.ml')
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I 'TP2/student(1)/student/.miniML.objs/byte' -I 'TP2/student(1)/student/.miniML.objs/native' -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -intf-suffix .ml -no-alias-deps -opaque -open MiniML -o 'TP2/student(1)/student/.miniML.objs/native/miniML__Ast.cmx' -c -impl 'TP2/student(1)/student/Ast.pp.ml')
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I 'TP2/student(1)/student/.miniML.objs/byte' -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -no-alias-deps -opaque -open MiniML -o 'TP2/student(1)/student/.miniML.objs/byte/miniML__Semantics.cmo' -c -impl 'TP2/student(1)/student/Semantics.pp.ml')
+> File "TP2/student(1)/student/Semantics.ml", line 346, characters 9-13:
+> Error (warning 27): unused variable expr.
+> File "TP2/student(1)/student/Semantics.ml", line 346, characters 18-21:
+> Error (warning 27): unused variable env.
+> File "TP2/student(1)/student/Semantics.ml", line 354, characters 10-17:
+> Error (warning 27): unused variable refexpr.
+> File "TP2/student(1)/student/Semantics.ml", line 354, characters 18-25:
+> Error (warning 27): unused variable valexpr.
+> File "TP2/student(1)/student/Semantics.ml", line 354, characters 30-33:
+> Error (warning 27): unused variable env.
+> File "TP2/student(1)/student/Semantics.ml", line 363, characters 13-17:
+> Error (warning 27): unused variable left.
+> File "TP2/student(1)/student/Semantics.ml", line 363, characters 18-23:
+> Error (warning 27): unused variable right.
+> File "TP2/student(1)/student/Semantics.ml", line 363, characters 28-31:
+> Error (warning 27): unused variable env.
+> File "TP2/student(1)/student/Semantics.ml", line 372, characters 10-14:
+> Error (warning 27): unused variable cond.
+> File "TP2/student(1)/student/Semantics.ml", line 372, characters 15-19:
+> Error (warning 27): unused variable body.
+> File "TP2/student(1)/student/Semantics.ml", line 372, characters 24-27:
+> Error (warning 27): unused variable env.
+> File "TP2/student(1)/student/Semantics.ml", line 381, characters 14-18:
+> Error (warning 27): unused variable expr.
+> File "TP2/student(1)/student/Semantics.ml", line 381, characters 23-26:
+> Error (warning 27): unused variable env.
+[2]
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I 'TP2/student(1)/student/.miniML.objs/byte' -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -open MiniML -short-paths -i -impl 'TP2/student(1)/student/parser__mock.ml.pp.mock') > '_build/default/TP2/student(1)/student/parser__mock.mli.inferred'
+$ (cd _build/default && /home/n7student/_opam/bin/menhir 'TP2/student(1)/student/parser.mly' --base 'TP2/student(1)/student/parser' --infer-read-reply 'TP2/student(1)/student/parser__mock.mli.inferred')
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o 'TP2/student(1)/student/parser.pp.mli' --intf 'TP2/student(1)/student/parser.mli' -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -intf 'TP2/student(1)/student/parser.pp.mli') > '_build/default/TP2/student(1)/student/.miniML.objs/parser.pp.mli.d'
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I 'TP2/student(1)/student/.miniML.objs/byte' -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -no-alias-deps -opaque -open MiniML -o 'TP2/student(1)/student/.miniML.objs/byte/miniML__Parser.cmi' -c -intf 'TP2/student(1)/student/parser.pp.mli')
+$ (cd _build/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'library-name="miniML"' -o 'TP2/student(1)/student/parser.pp.ml' --impl 'TP2/student(1)/student/parser.ml' -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I 'TP2/student(1)/student/.miniML.objs/byte' -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -no-alias-deps -opaque -open MiniML -o 'TP2/student(1)/student/.miniML.objs/byte/miniML__Lexer.cmo' -c -impl 'TP2/student(1)/student/lexer.pp.ml')
+$ (cd _build/default && /home/n7student/_opam/bin/ocamldep.opt -modules -impl 'TP2/student(1)/student/parser.pp.ml') > '_build/default/TP2/student(1)/student/.miniML.objs/parser.pp.ml.d'
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I 'TP2/student(1)/student/.miniML.objs/byte' -I 'TP2/student(1)/student/.miniML.objs/native' -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -intf-suffix .ml -no-alias-deps -opaque -open MiniML -o 'TP2/student(1)/student/.miniML.objs/native/miniML__Lexer.cmx' -c -impl 'TP2/student(1)/student/lexer.pp.ml')
+$ (cd _build/default && /home/n7student/_opam/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I 'TP2/student(1)/student/.miniML.objs/byte' -I 'TP2/student(1)/student/.miniML.objs/native' -I /home/n7student/_opam/lib/base -I /home/n7student/_opam/lib/base/caml -I /home/n7student/_opam/lib/base/shadow_stdlib -I /home/n7student/_opam/lib/ppx_inline_test/config -I /home/n7student/_opam/lib/ppx_inline_test/runtime-lib -I /home/n7student/_opam/lib/sexplib0 -intf-suffix .ml -no-alias-deps -opaque -open MiniML -o 'TP2/student(1)/student/.miniML.objs/native/miniML__Parser.cmx' -c -impl 'TP2/student(1)/student/parser.pp.ml')
